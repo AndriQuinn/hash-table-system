@@ -7,12 +7,15 @@
   --blue: #0088e0;
   --red: #dc3545;
   --green: #198754;
+  --darkGreen: #1a3a29;
+  --darkBlue: #1f2d47;
+  --darkRed: #432124;
 }
 
 @font-face {
   font-family: 'MyFont';
   src: url('./assets/fonts/Harmonia\ Sans\ W01\ Regular.ttf') format('woff2'),
-       url('./assets/fonts/MyFont.ttf') format('truetype');
+       url('./assets/fonts/Harmonia\ Sans\ W01\ Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -46,35 +49,35 @@
   margin: 0 0.5rem;
 }
 
-.border-panel {
+.blue-border-panel {
   border: 1px solid var(--border-panel);
-  transition: all 0.3s ease, color 0.3s ease;
-}
-
-.border-panel .insert:hover {
-  border: 1px solid var(--blue);
-}
-
-.insert {
   transition: border 0.3s ease, color 0.3s ease; 
 }
 
-.search {
+.green-border-panel {
+  border: 1px solid var(--border-panel);
   transition: border 0.3s ease, color 0.3s ease; 
 }
 
-.delete {
+.red-border-panel {
+  border: 1px solid var(--border-panel);
   transition: border 0.3s ease, color 0.3s ease; 
 }
 
-.insert:hover {
+.green-border-panel:hover {
   border: 1px solid var(--green);
 }
 
-.search:hover {
+.blue-border-panel:hover {
   border: 1px solid var(--blue);
 }
 
-.search:hover {
+.red-border-panel:hover {
   border: 1px solid var(--red);
+}
+
+.custom-placeholder::placeholder {
+  color: var(--sec-white-txt);       /* placeholder text color */
+  opacity: 1;        /* ensures full opacity */
+  font-style: italic; /* optional style */
 }
