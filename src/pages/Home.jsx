@@ -8,43 +8,32 @@ import deleteIcon from "../assets/icons/delete.svg";
 import rightArrow from "../assets/icons/right-arrow.svg";;
 import { Link } from "react-router-dom";
 import homeIcon from "../assets/icons/database.svg"
-
+import Header from '../components/Header';
 
 const Home = () => {
     return (<>
-        <div className="vh-100 vw-100 container-fluid dark-bg-color p-4 ">
-            <Header/>
+        <Container fluid className="min-vh-100 vw-100 container-fluid dark-bg-color p-4 ">
+            <Header 
+                icon={homeIcon} title={"HASHTABLE_SYS"} 
+                text={"Hash Table Implementation • Real-time Benchmarking • Collision Resolution via Chaining"}
+                height={40}
+            />
             <Body/>
-            {/* <Operations/> */}
-        </div>
+        </Container>
     </>)
 }   
 
-const Header = () => {
-    return ( <>
-        <div className="container-fluid dark-bg-color d-flex align-items-center justify-content-between text-center">
-        <div>
-            <div className=' d-flex align-items-center justify-content-start text-center'> 
-                <img src={homeIcon} alt="" height={35}/>
-                <h1 className='mx-2 mb-0'> HASHTABLE_SYS </h1>
-            </div>
-            <p className="dark-secondary-h mx-5 ">Hash Table Implementation • Real-time Benchmarking • Collision Resolution via Chaining </p>
-        </div>
-        </div>
-    </>)
-}
-
 const Body = () => {
     return ( <>
-    <Container fluid className='p-0 my-5'>
-      <Row className='my-1'>
+    <Container fluid className='p-0 my-0'>
+      <Row className='md-3'>
         <Panel  title={"TOTAL ITEMS"} value={10} className='blue-border-panel'/>
         <Panel title={"OPERATIONS"} value={0} className='blue-border-panel'/>
         <Panel title={"INSERTS"} value={0} className='green-border-panel'/>
         <Panel title={"SEARCHES"} value={0} className='blue-border-panel'/>
         <Panel title={"DELETIONS"} value={0} className='red-border-panel'/>
       </Row>
-      <Row className='my-1'>
+      <Row className='my-0'>
         <InsertPanel/>
         <SearchPanel/>
         <DeletePanel/>

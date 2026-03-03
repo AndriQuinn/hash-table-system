@@ -1,8 +1,6 @@
-import { Form } from 'react-bootstrap';
-import { useState } from 'react';
+import { Form } from 'react-bootstrap'
 
 const Input = ({label, type, value, setValue, placeholder}) => {
-    // const [email, setEmail] = useState('');
     return ( <>
         <Form.Group  >
             <Form.Label className='dark-secondary-h'>{label}</Form.Label>
@@ -11,7 +9,8 @@ const Input = ({label, type, value, setValue, placeholder}) => {
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                     placeholder={placeholder}
-                    className='bg-transparent rounded green-border-panel custom-placeholder'
+                    className='bg-transparent rounded green-border-panel custom-placeholder my-input'
+                    required
                 />
         </Form.Group>
     </>)

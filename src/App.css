@@ -21,13 +21,19 @@
 }
 
 
-
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: 'MyFont', sans-serif;
+  
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .dark-bg-color {
@@ -81,9 +87,9 @@
 }
 
 .custom-placeholder::placeholder {
-  color: var(--sec-white-txt);       /* placeholder text color */
-  opacity: 1;        /* ensures full opacity */
-  font-style: italic; /* optional style */
+  color: var(--sec-white-txt) !important;       
+  opacity: 1 !important;        
+  font-style: italic !important; 
 }
 
 .blue-border {
@@ -91,7 +97,7 @@
 }
 
 .green-font-color {
-  color: greenyellow
+  color: #28a745
 }
 .red-font-color {
   color: var(--red)
@@ -105,3 +111,15 @@
   border: 1px solid var(--red);
 }
 
+input.form-control {
+  color: whitesmoke;
+}
+
+input.form-control:focus {
+  color: whitesmoke;
+}
+
+.custom-switch .form-check-input:checked {
+  background-color: #28a745; /* Bootstrap success color */
+  border-color: #28a745;
+}

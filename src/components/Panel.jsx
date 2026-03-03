@@ -5,10 +5,10 @@ import { Col } from 'react-bootstrap';
 const Panel = ({title, value,className}) => {
     return (
 
-    <Col  className={`dark-panel m-2 p-3 rounded ${className}`}>
-        <p className='dark-secondary-h '> {title} </p>
-        <p> {value} </p>
-    </Col>
+        <Col  className={`dark-panel m-2 p-3 rounded ${className}`}>
+            <p className='dark-secondary-h '> {title} </p>
+            <p> {value} </p>
+        </Col>
 
     )
 }

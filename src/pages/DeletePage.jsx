@@ -11,39 +11,22 @@ import homeIcon from "../assets/icons/home.svg"
 import { Link } from "react-router-dom";
 import deleteIcon from "../assets/icons/delete.svg";
 import warningIcon from "../assets/icons/warning.svg";
+import Header from '../components/Header';
 
 const DeletePage = () => {
     return (<>
-    <div className="vh-100 vw-100 container-fluid dark-bg-color p-4 ">
-        <Header/>
+    <Container fluid className="min-vh-100 vw-100 dark-bg-color p-4 ">
+        <Header
+            icon={deleteIcon}
+            title={"DELETE DASHBOARD"}
+            text={"Item removal • Chain reorganization • Memory tracking"}
+            nav={true}
+            iconBg={"#432124"}
+        />
         <Body/>
-    </div>
+    </Container>
     </>)
 }   
-
-const Header = () => {
-    return ( <>
-        <div className="container-fluid dark-bg-color d-flex align-items-center justify-content-between text-center">
-            <div>
-                <div className=' d-flex align-items-center justify-content-start text-center'> 
-                    <div className='p-2 rounded d-flex align-items-center justify-content-center' style={{background: "#432124"}} >
-                        <img src={deleteIcon} alt="" height={20}/>
-                    </div>
-                    <h1 className='mx-2 mb-0'> DELETE DASHBOARD </h1>
-                </div>
-                <p className="dark-secondary-h mx-5 ">Item removal • Chain reorganization • Memory tracking </p>
-            </div>
-            <div>
-                <Button as={Link} to='/'  className='d-flex align-items-center justify-content-center'>
-                    <div className=' d-flex align-items-center justify-content-start text-center'> 
-                        <img src={homeIcon} alt="" height={20}/>
-                        <p className='mx-2 mb-0'> Home </p>
-                    </div>
-                </Button>
-            </div>
-        </div>
-    </>)
-}
 
 const Body = () => {
     const [email, setEmail] = useState('');
@@ -64,7 +47,7 @@ const Body = () => {
                     <InfoPanel/>
                 </Row>
             </Col>
-            <Col  className='dark-panel m-2 p-3 rounded blue-border-panel'>
+            <Col  className='dark-panel m-3 p-3 rounded blue-border-panel'>
                 <div className='d-flex align-items-center justify-content-start mx-0'>
                     <img src={graphIcon} height={30}/>
                     <h4 className=' mx-2 mb-0'> Graph </h4>
@@ -117,7 +100,7 @@ const DeletePanel = () => {
 
 const InfoPanel = ({email, setEmail}) => {
     return ( <>
-        <h4 className=''> INVENTORY STATUS </h4>
+        <h4 className=''> STATUS </h4>
         <div className='my-0 d-flex justify-content-between'>
             <p className='dark-secondary-h'> TOTAL ITEMS </p>
             <p className='blue-font-color'> 0 </p>
