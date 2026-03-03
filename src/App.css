@@ -49,6 +49,10 @@
   margin: 0 0.5rem;
 }
 
+.gray-border {
+  border: 1px solid var(--border-panel);
+}
+
 .blue-border-panel {
   border: 1px solid var(--border-panel);
   transition: border 0.3s ease, color 0.3s ease; 
@@ -81,3 +85,23 @@
   opacity: 1;        /* ensures full opacity */
   font-style: italic; /* optional style */
 }
+
+.blue-border {
+  border: 1px solid var(--blue);
+}
+
+.green-font-color {
+  color: greenyellow
+}
+.red-font-color {
+  color: var(--red)
+}
+
+.blue-font-color {
+  color: var(--blue)
+}
+
+.red-border {
+  border: 1px solid var(--red);
+}
+

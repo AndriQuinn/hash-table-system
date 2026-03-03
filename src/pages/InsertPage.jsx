@@ -4,8 +4,11 @@ import { Container, Row, Col, Button, Form, } from 'react-bootstrap';
 import addIcon from "../assets/icons/plus.svg";
 import Panel from "../components/Panel";
 import Input from "../components/Input";
-
+import thunderIcon from "../assets/icons/thunder.svg"
+import graphIcon from "../assets/icons/trend.svg"
 import { useState } from 'react';
+import homeIcon from "../assets/icons/home.svg"
+import { Link } from "react-router-dom";
 
 const InsertPage = () => {
     return (<>
@@ -29,7 +32,12 @@ const Header = () => {
                 <p className="dark-secondary-h mx-5 ">Manual insertion • Automated data feeding • Real-time benchmarking </p>
             </div>
             <div>
-                <Button  className='d-flex align-items-center justify-content-center w-100 text-center dark-panel rounded green-border-panel'>INSERT ITEM</Button>
+                <Button as={Link} to='/'  className='d-flex align-items-center justify-content-center'>
+                    <div className=' d-flex align-items-center justify-content-start text-center'> 
+                        <img src={homeIcon} alt="" height={20}/>
+                        <p className='mx-2 mb-0'> Home </p>
+                    </div>
+                </Button>
             </div>
         </div>
     </>)
@@ -51,7 +59,10 @@ const Body = () => {
                 </Row>
             </Col>
             <Col  className='dark-panel m-2 p-3 rounded green-border-panel'>
-                <h4> Graph</h4>
+                <div className='d-flex align-items-center justify-content-start mx-0'>
+                    <img src={graphIcon} height={30}/>
+                    <h4 className=' mx-2 mb-0'> Graph </h4>
+                </div>
                 <div>
                     <p> No data yet </p>
                 </div>
@@ -63,7 +74,11 @@ const Body = () => {
 
 const AutoFeedPanel = () => {
     return (<>
-        <h4>Auto Feed</h4>
+        <div className='d-flex align-items-center justify-content-start mx-0'>
+            <img src={thunderIcon} height={30}/>
+            <h4 className='mb-0'> Auto Feed</h4>
+        </div>
+        
         <div className='my-2'>
             <div className='d-flex justify-content-between'>
                 <p className='dark-secondary-h'> AUTOMATED INSERT</p>

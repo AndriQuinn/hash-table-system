@@ -7,7 +7,7 @@ import addIcon from "../assets/icons/plus.svg";
 import deleteIcon from "../assets/icons/delete.svg";
 import rightArrow from "../assets/icons/right-arrow.svg";;
 import { Link } from "react-router-dom";
-
+import homeIcon from "../assets/icons/database.svg"
 
 
 const Home = () => {
@@ -22,9 +22,14 @@ const Home = () => {
 
 const Header = () => {
     return ( <>
-        <div >
-            <h1 className='fw-bolder'> HASHTABLE_SYS </h1>
-            <p className="dark-secondary-h "> Hash Table Implementation • Real-time Benchmarking • Collision Resolution via Chaining</p>
+        <div className="container-fluid dark-bg-color d-flex align-items-center justify-content-between text-center">
+        <div>
+            <div className=' d-flex align-items-center justify-content-start text-center'> 
+                <img src={homeIcon} alt="" height={35}/>
+                <h1 className='mx-2 mb-0'> HASHTABLE_SYS </h1>
+            </div>
+            <p className="dark-secondary-h mx-5 ">Hash Table Implementation • Real-time Benchmarking • Collision Resolution via Chaining </p>
+        </div>
         </div>
     </>)
 }
@@ -97,7 +102,7 @@ const SearchPanel = () => {
             <p className='dark-secondary-h'> Execution Time </p>
             <p style={{color: "#0088e0"}}> ✓</p>
         </div>
-        <Button variant="primary" className='d-flex align-items-center justify-content-center w-100 text-center'>OPEN DASHBOARD <img className='mx-2' src={rightArrow} height={15}/></Button>
+        <Button as={Link} to="/search"  variant="primary" className='d-flex align-items-center justify-content-center w-100 text-center'>OPEN DASHBOARD <img className='mx-2' src={rightArrow} height={15}/></Button>
     </Col>
     </> )
 }
@@ -124,7 +129,7 @@ const DeletePanel = () => {
             <p className='dark-secondary-h'> Memory Freed </p>
             <p style={{color: "#0088e0"}}> ✓</p>
         </div>
-        <Button variant="danger" className='d-flex align-items-center justify-content-center w-100 text-center'>OPEN DASHBOARD <img className='mx-2' src={rightArrow} height={15}/></Button>
+        <Button as={Link} to="/delete" variant="danger" className='d-flex align-items-center justify-content-center w-100 text-center'>OPEN DASHBOARD <img className='mx-2' src={rightArrow} height={15}/></Button>
     </Col>
     </> )
 }
